@@ -1,0 +1,83 @@
+header {
+    background-color: #fff;
+    padding: 0px;
+}
+.box {
+    width: 100%; 
+    max-width: 1920px;
+    height: 192px;
+    background-color: #fff;
+    border: 1px solid #fa7903;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.male,
+.female,
+.child {
+    font-family: 'inter';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    position: absolute;
+    left: 50px;
+}
+
+.male {
+    left: 60px;
+    top: 10%;
+    transform: translate(-20%);
+    
+}
+
+.female {
+    left: 120px;
+    top: 10%;
+    transform: translate(-20%);
+}
+.child {
+    left: 180px;
+    top: 10%;
+    transform: translate(-20%);
+}
+
+@media (max-width: 768px) {
+    .male,
+    .female,
+    .child {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+        left: initial;
+        top: initial;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 105px;
+}  
+
+.shoppingcart {
+position: absolute;
+width: 50px;
+height: 37px;
+right: 20%;
+top: 102px;
+}
+
+.user {
+    position: absolute;
+    width: 50px;
+    height: 37px;
+    left: 78.4%;
+}
