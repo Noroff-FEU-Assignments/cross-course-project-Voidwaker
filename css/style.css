@@ -1,3 +1,9 @@
+.index {
+    background-color: #f8f8f8;
+}
+
+
+
 header {
     background-color: #fff;
     padding: 0px;
@@ -81,3 +87,81 @@ top: 102px;
     height: 37px;
     left: 78.4%;
 }
+
+.sitat2 {
+    position: absolute;
+    width: 462px;
+    height: 286px;
+    left: 126px;
+    top: 270px;
+
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #000;
+}
+
+.image-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+}
+
+.image-container1 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sitat1 {
+    position: static;
+    width: 278px;
+    height: 222px;
+    left: 852px;
+    top: 327px;
+
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+
+footer {
+    background-color: #d9d9d9;
+    padding: 20px;
+    text-align: center;
+    margin: 0px;
+}
+
+.footer a {
+    margin: 0 250px;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-content {
+    margin-bottom: 10px;
+}
+
+.footer-content a{
+    margin: 0 15px;
+    color: #d9d9d9;
+    text-decoration: none;
+}
+
