@@ -132,10 +132,11 @@ header {
 }
 
 .sitat1 {
-    position: static;
+    display: flex;
+    position: absolute;
     width: 278px;
     height: 222px;
-    left: 852px;
+    right: 20%;
     top: 327px;
 
     font-family: 'inter';
@@ -146,6 +147,13 @@ header {
 
     color: #000;
 }
+
+.seemore {
+    display: flexbox;
+    position: relative;
+    box-sizing: content-box;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -210,4 +218,3 @@ footer {
     color: #d9d9d9;
     text-decoration: none;
 }
-
