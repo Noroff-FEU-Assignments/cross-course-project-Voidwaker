@@ -31,7 +31,7 @@ header {
 }
 
 .primary-header nav {
-display: flex;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     gap: 40px;
@@ -81,6 +81,7 @@ footer a {
 
 .home-page {
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
     height: 100%;
     margin-top: 50px;
@@ -88,14 +89,52 @@ footer a {
 }
 .app-info {
     display: flex;
-    margin-left: 126px;
     flex-direction: column;
+    /* flex-wrap: nowrap; */
+    flex-shrink: 0;
+    min-width: 0;
+
+}
+
+.app-info p {
+    display: flex;
+    line-height: 19px;
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 300px;
+
+}
+
+h2 {
+font-family: 'inter';
+font-size: 32px;
+font-weight: bolder;
 }
 .ilustrasjons-bilde {
     display: flex;
     justify-content: center;
-    width: 400px;
+    /*   width: 400px;
     height: 400px;
+    max-width: 100%; */
+}
+
+.ilustrasjons-bilde img {
+    width: 300px;
+    height: 400px;
+    max-width: 100%;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.rainydays-info p {
+    width: 278px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 19px;
 }
 
 body {
@@ -159,6 +198,16 @@ main {
     
 }
 
+button {
+    background-color: #E56E00;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+}
 
 
 /*contact page*/
