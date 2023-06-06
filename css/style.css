@@ -1,125 +1,166 @@
 /* Least specific style*/
 header {
     background-color: #d9d9d9;
-    position: absolute;
-    height: 48px;
-    left: 0px;
-    top: 0px;
+    position: sticky;
+    top: 0;
     width: 100%;
 }
 
 .shipping-conditions {
     display: flex;
-    position: absolute;
-    width: 233px;
-    height: 19px;
-    left: 1650px;
-    top: 15px;
+    width: 100%;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
     font-family: 'inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+
+}
+.shipping-conditions p {
+    margin-right: 20px;
 }
 .primary-header {
+    display: flex;
     border: 1px solid darkorange;
-    box-sizing: border-box;
-    position: relative;
-    width: 100%;
-    height: 144px;
-    left: 0px;
-    top: 48px;
-    justify-content: space-between;
-}
-
-nav {
-    display: flex;
-    position: absolute;
-    text-align: center;
-    margin-top: 10px;
-    left: 145px;
-    top: 40%;
-    margin: 0 100px;
-transform: translate(-10%);
-}
-.logo {
-    width: 198px;
-    height: 105px;
-    max-width: 1920px;
     background-color: #fff;
-    display: flex;
-    position: absolute;
-    right: 50%;
-
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.primary-header nav {
+display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 40px;
+}
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .logo img {
     max-width: 100%;
     max-height: 100%;
-    transform: translate(50%)
 }
 
 .account-shopping {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 100px;
-    margin-top: 7%;
+    gap: 40px;
 }
 
-.shopping {
-    position: absolute;
-    width: 50px;
-    height: 37px;
-    right: 90%;
+.account-shopping img {
+    transform: scale(1.5);
+
 }
 
-.shopping,
-.account {
+.footer-text {
     display: flex;
-    flex-direction: row;
-    top: 40%;
-    justify-content: center;
-    width: 100px;
-    right: 10%;
-    margin: 0 150px;
+    justify-content: space-around;
     
-    transform: translate(-10%);
 }
-.footer {
-    background-color: #d9d9d9;
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    height: 100px;
-    left: 0px;
-    text-align: center
-}
-.footer a {
-    margin: 0 250px;
+footer a {
     text-decoration: none;
     color: black;
-
+    font-size: 20px;
+}
+.conteiner-footer {
+    background-color: #d9d9d9;
+    padding: 20px;
 }
 /*homepage*/
+
 .home-page {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 300px;
+    margin-top: 50px;
+    background-color: #f8f8f8;
 }
 .app-info {
     display: flex;
-    position: relative;
     margin-left: 126px;
     flex-direction: column;
 }
 .ilustrasjons-bilde {
     display: flex;
+    justify-content: center;
     width: 400px;
     height: 400px;
 }
 
-.
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-bottom: 60px;
+}
+
+
+.homepage-features {
+    background-color: #f8f8f8;
+}
+.featured-jackets1 img {
+    width: 200px;
+    height: 248px;
+}
+
+.featured-jackets1,
+.featured-jackets2,
+.featured-jackets3 {
+    margin: 65px;
+
+}
+
+.featured-jackets1 p {
+    display: flex;
+    max-width: 200px;
+}
+
+.featured-jackets2 img {
+    width: 200px;
+    height: 248px;
+}
+
+.featured-jackets2 p {
+    display: flex;
+    max-width: 200px;
+}
+
+
+.featured-jackets3 img {
+    width: 200px;
+    height: 248px;
+
+}
+
+.featured-jackets3 p {
+    display: flex;
+    width: 200px;
+
+}
+
+.homepage-features {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 60px; */
+    margin-top: 60px;
+    
+}
+
+
+
 /*contact page*/
 /*productlist*/
 /*support*/
