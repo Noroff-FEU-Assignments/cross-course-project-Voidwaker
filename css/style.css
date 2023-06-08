@@ -83,14 +83,12 @@ footer a {
     display: flex;
     justify-content: space-evenly;
     width: 100vw;
-    /* height: 100%; */
     margin-top: 50px;
     background-color: #f8f8f8;
 }
 .app-info {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: nowrap; */
     flex-shrink: 0;
     min-width: 0;
     width: 33%;
@@ -104,7 +102,6 @@ footer a {
     font-size: 16px;
     font-weight: 300px;
 
-
 }
 
 h2 {
@@ -115,11 +112,6 @@ font-weight: bolder;
 .ilustrasjons-bilde {
     width: 33vw;
     height: 100%;
- /*    display: flex; */
-  /*   justify-content: center; */
-    /*   width: 400px;
-    height: 400px;
-    max-width: 100%; */
 }
 
 .ilustrasjons-bilde img {
@@ -201,7 +193,6 @@ main {
 .homepage-features {
     display: flex;
     justify-content: space-between;
-    /* gap: 60px; */
     margin-top: 60px;
     
 }
@@ -228,11 +219,7 @@ button a {
 .jackets {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* margin: 80px; */
-    /* margin-top: 0px; */
-  /*   background-color: #d9d9d9; */
-/*     flex-direction: column; */
+    margin: 80px;
 }
 
 .jackets img {
@@ -241,18 +228,13 @@ button a {
 
 .jacket-item {
     display: flex;
-/*     flex: 0 0 20%; */
-/*     flex-direction: row; */
-/*     flex-wrap: wrap; */
     margin-top: 50px;
+
 }
 .jacket-item img{
     display: flex;
     width: 200px;
     justify-content: center;
-
-
-
 }
 
 .jacket-text {
@@ -260,23 +242,97 @@ button a {
     width: 200px;
     justify-content: center;
     flex-direction: column;
-
 }
 .jacket-text p {
     font-size: 14px;
     line-height: 17px;
     height: 5px;
-
 }
 
 .produkt-konteiner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 }
+
+/* productdescription */
+
+
+.product-information {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    justify-content: space-evenly;
+    background-color: #f8f8f8;
+}
+
+.product-jacket {
+    display: flex;
+    align-items: center;
+}
+
+.product-jacket-description {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.product-jacket,
+.product-jacket-description{
+    display: flex;
+}
+.product-jacket-description p{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px
+}
+
+.product-jacket img{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+
 
 /*support*/
 /*cart page*/
+.body-cart{
+    background-color: #f8f8f8;
+}
+.shopping-cart {
+ /*    background-color: #f8f8f8; */
+}
+
+.shopping-cart-box p{
+    display: flex;
+    /* width: 800px; */
+
+}
+
+.shopping-cart-content {
+    display: flex;
+/*     background-color: #fff; */
+}
+.shopping-cart-content p {
+    display: flex;
+    flex-direction: column;
+}
+.shopping-cart-content img {
+    display: flex;
+    justify-content: center;
+    height: 180px;
+    width: 140px;
+}
+
+.shopping-cart-box,
+.shopping-cart-content {
+/*     align-items: center; */
+/*     backgroun
+d-color: #fff; */
+}
+
 /*about us*/
 /*media queries*/

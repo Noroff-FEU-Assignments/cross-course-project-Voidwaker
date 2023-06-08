@@ -1,0 +1,41 @@
+Date : 2023-06-08 11:55:46
+Directory : c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker
+Total : 12 files,  760 codes, 15 comments, 81 blanks, all 856 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| HTML     |          9 |        486 |          0 |         16 |        502 |
+| CSS      |          1 |        261 |         15 |         63 |        339 |
+| XML      |          2 |         13 |          0 |          2 |         15 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                       |         12 |        760 |         15 |         81 |        856 |
+| . (Files)                                                                               |          9 |        486 |          0 |         16 |        502 |
+| css                                                                                     |          1 |        261 |         15 |         63 |        339 |
+| images                                                                                  |          2 |         13 |          0 |          2 |         15 |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\aboutUS.html            | HTML     |         39 |          0 |          2 |         41 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\cart.html               | HTML     |         53 |          0 |          2 |         55 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\contact.html            | HTML     |         39 |          0 |          2 |         41 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\css\style.css           | CSS      |        261 |         15 |         63 |        339 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\images\cart.svg         | XML      |         10 |          0 |          1 |         11 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\images\user.svg         | XML      |          3 |          0 |          1 |          4 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\index.html              | HTML     |         80 |          0 |          1 |         81 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\login.html              | HTML     |          0 |          0 |          1 |          1 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\productdescription.html | HTML     |         57 |          0 |          0 |         57 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\produktlist.html        | HTML     |        138 |          0 |          2 |        140 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\support.html            | HTML     |         40 |          0 |          3 |         43 |
+| c:\Users\sigurd\Documents\GitHub\cross-course-project-Voidwaker\tos.html                | HTML     |         40 |          0 |          3 |         43 |
+| Total                                                                                   |          |        760 |         15 |         81 |        856 |
++-----------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
