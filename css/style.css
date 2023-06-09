@@ -320,13 +320,21 @@ button a {
 
 /*support*/
 
+
+.contact-coulor {
+    background-color: #f8f8f8;
+}
 .contact-info {
 display: flex;
 flex-direction: column;
+background-color: #f8f8f8;
+align-items: center;
+width: 200px;
+
 
 }
 .h1-thankyou {
-   /*  display: flex; */
+    display: flex;
     justify-content: center;
 
 } 
@@ -337,7 +345,7 @@ flex-direction: column;
 
 .conteiner-form {
 /* width: 300px; */
-
+background-color: #f8f8f8;
 }
 
 textarea{
@@ -356,14 +364,12 @@ input[type=text]:focus {
 
 }
 
-.conteiner-form {
-/*     display: flex;
-    flex-direction: column; */
-}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    /* width: 1000px; */
 }
 
 
@@ -380,11 +386,6 @@ form {
     /* flex-direction: column; */
 }
 
-/* h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: -75px;
-} */
 
 .shopping-cart-box {
     display: flex;
