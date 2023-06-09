@@ -322,7 +322,7 @@ button a {
 
 
 .contact-coulor {
-    background-color: #f8f8f8;
+   /*  background-color: #f8f8f8; */
 }
 .contact-info {
 display: flex;
@@ -352,11 +352,17 @@ textarea{
     height: 200px;
 }
 
-input[type=checkbox] {
+input[type=checkbox],
+label[type=checkbox] {
     display: flex;
-    justify-self:center;
+    vertical-align: middle;
 }
-
+.checkbox-fix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 input[type=text] {
     width: 300px;
 }
@@ -369,14 +375,30 @@ input[type=text]:focus {
 
 }
 
+.contact-conteiner,
+.h1-thankyou {
+    display: flex;
+    flex-direction: column;
 
+}
+
+.contact-form-conteiner {
+    display: flex;
+    justify-content: space-around;
+    gap: 141px;
+
+}
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-
+.form-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
 /*cart page*/
 
