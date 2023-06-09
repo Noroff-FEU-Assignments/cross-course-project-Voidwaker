@@ -319,6 +319,55 @@ button a {
 
 
 /*support*/
+
+.contact-info {
+display: flex;
+flex-direction: column;
+
+}
+.h1-thankyou {
+   /*  display: flex; */
+    justify-content: center;
+
+} 
+.contact-info p {
+    display: flex;
+
+}
+
+.conteiner-form {
+/* width: 300px; */
+
+}
+
+textarea{
+    width: 500px;
+}
+
+input[type=text] {
+    width: 300px;
+}
+input[type=email] {
+    width: 300px;
+}
+
+input[type=text]:focus {
+    border: 2px solid #E56E00;
+
+}
+
+.conteiner-form {
+/*     display: flex;
+    flex-direction: column; */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
 /*cart page*/
 .body-cart{
     background-color: #f8f8f8;
