@@ -617,11 +617,14 @@ form {
     .tos-total{
         display: flex;
         flex-wrap: wrap;
-        flex-shrink: initial;
-        
     }
 }
-
+@media (min-width:856px) and (max-width:100%) {
+    .tos-total{
+        flex-direction: column;
+        padding: 20px;
+    }
+}
 
 
 
