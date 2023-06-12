@@ -520,6 +520,7 @@ form {
 
 .terms-and-conditions {
     display: flex;
+  /*   flex-wrap: wrap; */
     justify-content: center;
     line-height: 19px;
     line-break: normal;
@@ -529,9 +530,8 @@ form {
     
     
 }
-.terms-and-conditions li{
-    display: flex;
-    gap: 10px;
+.terms-and-conditions ul li{
+    padding: 20px;
     
 }
 
@@ -554,3 +554,31 @@ form {
 }
 
 /*media queries*/
+
+/* for mobile */
+
+@media (max-width: 610px) {
+    .account-shopping,
+    {
+        display: none;
+    }
+}
+
+
+@media (max-width:610px) {
+    .home-page,
+    .homepage-features{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
+
+@media (max-width:800px) {
+    .product-information,
+    .produckt-jacket-description{
+        flex-wrap: wrap;
+        display: flex;
+    }
+}
