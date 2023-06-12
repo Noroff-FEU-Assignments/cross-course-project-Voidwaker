@@ -59,6 +59,8 @@ nav a {
     display: flex;
     justify-content: center;
     position: relative;
+    margin: 0;
+    max-width: 100px;
 }
 
 .logo img {
@@ -98,6 +100,7 @@ footer a {
     justify-content: space-between;
     margin-top: 50px;
     background-color: #f8f8f8;
+    flex-wrap: wrap;
 }
 .app-info {
     display: flex;
@@ -161,6 +164,8 @@ main {
 
 .homepage-features {
     background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
 }
 .featured-jackets1 img {
     width: 200px;
@@ -507,9 +512,28 @@ form {
 
 .tos-heading {
     display: flex;
-    align-self: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'inter';
 }
 
+.terms-and-conditions {
+    display: flex;
+    justify-content: center;
+    line-height: 19px;
+    line-break: normal;
+    font-family: 'inter';
+    width: 700px;
+    height: 1000px;
+    
+    
+}
+.terms-and-conditions li{
+    display: flex;
+    gap: 10px;
+    
+}
 
 
 /*about us*/
