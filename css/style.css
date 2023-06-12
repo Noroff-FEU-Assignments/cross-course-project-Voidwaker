@@ -12,9 +12,6 @@ main {
     margin: auto;
 }
 
-.shopping-cart-main {
- /*    margin: auto; */
-}
 
 body {
     display: flex;
@@ -124,10 +121,7 @@ h2 {
     font-size: 32px;
     font-weight: bolder;
 }
-.ilustrasjons-bilde {
-    /* width: 33vw; */
-    /* height: 100%; */
-}
+
 
 .ilustrasjons-bilde img {
     width: 300px;
@@ -317,10 +311,6 @@ button a {
 
 /*support*/
 
-
-.contact-coulor {
-   /*  background-color: #f8f8f8; */
-}
 .contact-info {
 display: flex;
 flex-direction: column;
@@ -536,7 +526,6 @@ form {
 .thank-you-text p {
     width: 529px;
     height: 127px;
-    float: left; 250px;
 
 }
 
