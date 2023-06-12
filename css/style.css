@@ -99,7 +99,6 @@ footer a {
 .home-page {
     display: flex;
     justify-content: space-between;
-    /* width: 100vw; */
     margin-top: 50px;
     background-color: #f8f8f8;
 }
@@ -108,8 +107,6 @@ footer a {
     flex-direction: column;
     flex-shrink: 0;
     margin-left: 10px;
-    /* min-width: 0; */
-  /*   width: 33%; */
 
 }
 
@@ -123,9 +120,9 @@ footer a {
 }
 
 h2 {
-font-family: 'inter';
-font-size: 32px;
-font-weight: bolder;
+    font-family: 'inter';
+    font-size: 32px;
+    font-weight: bolder;
 }
 .ilustrasjons-bilde {
     /* width: 33vw; */
@@ -142,6 +139,7 @@ font-weight: bolder;
 h1{
     font-size: 42px;
     font-weight: bolder;
+    font-family: 'inter';
 }
 
 .rainydays-info p {
@@ -156,7 +154,6 @@ h1{
     display: flex;
     flex-direction: column;
     margin-right: 25px;
-    /* width: 33%; */
 }
 body {
     margin: 0;
@@ -515,5 +512,32 @@ form {
     flex-direction: column;
 }
 
+
+/* tos */
+
+.tos-heading {
+    display: flex;
+    align-self: center;
+}
+
+
+
 /*about us*/
+
+
+/* thank you */
+
+.thank-you-background img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.thank-you-text p {
+    width: 529px;
+    height: 127px;
+    float: left; 250px;
+
+}
+
 /*media queries*/
