@@ -645,7 +645,8 @@ form {
         flex-wrap: wrap;
     }
     .product-jacket img{
-        width: fit-content;
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -657,6 +658,21 @@ form {
         flex-direction: row;
     }
 }
+
+
+
+@media (max-width:865px){
+    .shopping-cart,
+    .shopping-cart-box,
+    .shopping-cart-shipping{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 390px;
+    }
+}
+
+
 
 
 
