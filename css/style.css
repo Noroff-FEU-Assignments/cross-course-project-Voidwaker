@@ -532,13 +532,6 @@ form {
     
     
 }
-.terms-and-conditions ul li{
-    /*  display: flex; 
-    flex-direction: row; */
-    /* padding: 20px;
-    font-family: 'inter'; */
-
-}
 .tos-text ul{
     display: flex;
     flex-wrap: wrap;
@@ -645,12 +638,36 @@ form {
         flex-wrap: wrap;
     }
 }
-@media (min-width:) {
+
+@media (max-width:856px){
+    .product-information{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-jacket img{
+        width: fit-content;
+    }
+}
+
+
+@media (max-width:856px){
+    .jacket-item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+
+
+
+
+/* @media (min-width:) {
     .tos-total{
         flex-direction: column;
         padding: 20px;
     }
-}
+} */
 
 
 
