@@ -550,13 +550,30 @@ form {
 
 
 /*about us*/
+.ABOUT-US-H1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-us-background img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
-
+.about-us p {
+    background-color: #f8f8f8;
+    display: flex;
+    font-family: 'inter';
+    font-weight: 300;
+    font-size: 18px;
+    
+}
 /* thank you */
 
 
 .thank-you-background img{
-    background-image: url("https://drive.google.com/file/d/1V696NvYNBqWLzyFXk-JrMJCNamCqEy1j/view?usp=drive_link");
+
 }
 
 .thank-you-text p {
