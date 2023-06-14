@@ -315,7 +315,10 @@ button a {
 
 
 /*support*/
-
+/* .contact-form{
+    display: flex;
+    flex-wrap: wrap;
+} */
 .contact-info {
 display: flex;
 flex-direction: column;
@@ -340,6 +343,7 @@ background-color: #f8f8f8;
 }
 
 textarea{
+    display: flex;
     width: 500px;
     height: 200px;
 }
@@ -378,6 +382,7 @@ input[type=text]:focus {
     display: flex;
     justify-content: space-around;
     gap: 141px;
+    flex-wrap: wrap;
 
 }
 form {
@@ -749,6 +754,41 @@ form {
         flex-wrap: wrap;
         font-size: 16px;
 
+    }
+}
+
+/* contact-us */
+
+@media (max-width:1000px){
+    .contact-form-conteiner,
+    .form,
+    .conteiner-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width:600px){
+    .contact-conteiner,
+    .contact-info,
+    .contact-form-conteiner,
+    .h1-thankyou,
+    .fonteiner-form,
+    .form-button{
+        display: flex;
+        align-items: center;
+        
+    }
+}
+
+@media (max-width:700px) {
+    form,
+    textarea{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
     }
 }
 
