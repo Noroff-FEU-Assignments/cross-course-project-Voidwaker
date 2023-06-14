@@ -556,7 +556,7 @@ form {
 
 
 .thank-you-background img{
-    background-image: url(https://drive.google.com/file/d/1V696NvYNBqWLzyFXk-JrMJCNamCqEy1j/view?usp=drive_link);
+    background-image: url("https://drive.google.com/file/d/1V696NvYNBqWLzyFXk-JrMJCNamCqEy1j/view?usp=drive_link");
 }
 
 .thank-you-text p {
