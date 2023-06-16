@@ -12,9 +12,6 @@ main {
     margin: auto;
 }
 
-.shopping-cart-main {
- /*    margin: auto; */
-}
 
 body {
     display: flex;
@@ -62,6 +59,8 @@ nav a {
     display: flex;
     justify-content: center;
     position: relative;
+    margin: 0;
+    max-width: 100px;
 }
 
 .logo img {
@@ -101,6 +100,7 @@ footer a {
     justify-content: space-between;
     margin-top: 50px;
     background-color: #f8f8f8;
+    flex-wrap: wrap;
 }
 .app-info {
     display: flex;
@@ -124,10 +124,7 @@ h2 {
     font-size: 32px;
     font-weight: bolder;
 }
-.ilustrasjons-bilde {
-    /* width: 33vw; */
-    /* height: 100%; */
-}
+
 
 .ilustrasjons-bilde img {
     width: 300px;
@@ -167,6 +164,8 @@ main {
 
 .homepage-features {
     background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
 }
 .featured-jackets1 img {
     width: 200px;
@@ -316,11 +315,10 @@ button a {
 
 
 /*support*/
-
-
-.contact-coulor {
-   /*  background-color: #f8f8f8; */
-}
+/* .contact-form{
+    display: flex;
+    flex-wrap: wrap;
+} */
 .contact-info {
 display: flex;
 flex-direction: column;
@@ -345,6 +343,7 @@ background-color: #f8f8f8;
 }
 
 textarea{
+    display: flex;
     width: 500px;
     height: 200px;
 }
@@ -383,6 +382,7 @@ input[type=text]:focus {
     display: flex;
     justify-content: space-around;
     gap: 141px;
+    flex-wrap: wrap;
 
 }
 form {
@@ -517,27 +517,316 @@ form {
 
 .tos-heading {
     display: flex;
-    align-self: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'inter';
 }
 
+.terms-and-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 19px;
+    font-size: 20px;
+    /* line-break: normal; */
+    font-family: 'inter';
+    /* width: 700px;
+    height: 1000px; */
+    word-wrap: break-word;
+    
+    
+}
+.tos-text ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    word-wrap: break-word;
+    font-family: 'inter';
+    font-weight: 400;
+    font-size: 18px;
+}
 
 
 /*about us*/
+.ABOUT-US-H1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-us-background img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
-
+.about-us p {
+    background-color: #f8f8f8;
+    display: flex;
+    font-family: 'inter';
+    font-weight: 300;
+    font-size: 18px;
+    
+}
 /* thank you */
 
+
 .thank-you-background img{
-    display: flex;
-    width: 100%;
-    height: 100%;
+
 }
 
 .thank-you-text p {
-    width: 529px;
-    height: 127px;
-    float: left; 250px;
+    display: flex;
+    /* position: fixed; */
+    top: 40%;
+    left: 10%;
+    background-color: #fff;
+    width: 300px;
+    height: 95px;
+
+}
+
+.thank-you-text,
+.thank-you-background {
+    display: flex;
+}
+
+
+/* confirmation-cart */
+
+.order-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    line-height: 19px;
+    
+}
+
+.order-total p {
+    font-family: 'inter';
+    font-weight: 300;
+    font-size: 16px;
+    
+}
+
+.order-total img {
+    width: 300px;
+    height: 358px;
+}
+.h1-continue-shopping {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inter';
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
+.order-confirmation {
+    display: flex;
+}
+
+.order-confirmation img {
+    width: 300px;
+    height: 400px;
+    max-width: 100%;
 
 }
 
 /*media queries*/
+
+/* for responsiveness*/
+
+@media (max-width: 810px) {
+    .shipping-conditions{
+        display: none;
+
+    }
+}
+
+@media (max-width: 610px) {
+    .account-shopping {
+    display: none;
+    }
+}
+
+
+@media (max-width:1020px) {
+    .home-page,
+    .app-info,
+    .homepage-features{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
+
+@media (max-width:800px) {
+    .product-information,
+    .produckt-jacket-description{
+        flex-wrap: wrap;
+        display: flex;
+    }
+}
+
+@media (max-width:856px){
+    .terms-and-conditions {
+        font-size: 14px;
+
+    }
+    .tos-text li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:856px){
+    .tos-heading{
+        justify-content: center;
+    }
+}
+@media (max-width:856px) {
+    .tos-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+}
+
+@media (min-width:857px){
+    .tos-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        
+    }
+}
+
+@media (max-width:856px){
+    .tos-total{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:856px){
+    .product-information{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-jacket img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+@media (max-width:856px){
+    .jacket-item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+
+
+@media (max-width:865px){
+    .shopping-cart,
+    .shopping-cart-box,
+    .shopping-cart-shipping{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 390px;
+    }
+}
+
+@media (max-width:888px){
+    .order-total{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:888px){
+    .h1-continue-shopping{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 32px;
+
+    }
+}
+
+@media (max-width:590px){
+    .h1-continue-shopping{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 22px;
+
+    }
+}
+
+@media (max-width:388px){
+    .h1-continue-shopping{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+
+    }
+}
+
+/* contact-us */
+
+@media (max-width:1000px){
+    .contact-form-conteiner,
+    .form,
+    .conteiner-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width:600px){
+    .contact-conteiner,
+    .contact-info,
+    .contact-form-conteiner,
+    .h1-thankyou,
+    .fonteiner-form,
+    .form-button{
+        display: flex;
+        align-items: center;
+        
+    }
+}
+
+@media (max-width:700px) {
+    form,
+    textarea{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+}
+
+
+
+
+/* @media (min-width:) {
+    .tos-total{
+        flex-direction: column;
+        padding: 20px;
+    }
+} */
+
+
+
+/* mobile */
