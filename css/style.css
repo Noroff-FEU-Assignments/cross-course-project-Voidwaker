@@ -467,6 +467,11 @@ form {
     /* argin-top: 20px; */
 }
 
+.pointer:hover {
+    cursor: pointer;
+
+}
+
 .shopping-cart-total {
     display: flex;
     flex-direction: column;
