@@ -845,9 +845,21 @@ height: 400px;
 }
 
 
-@media 
 
 
+/* about us */
+
+
+@media (min-width:801px) {
+    .about-us-p{
+        display: block;
+    }
+
+
+    .about-us-p-mobile {
+        display: none;
+    }
+}
 
 /* @media (min-width:) {
     .tos-total{
