@@ -463,8 +463,8 @@ form {
 .shopping-cart-shipping {
     display: flex;
     width: 831px;
-    height: 100px;
-    margin-top: 20px;
+    /* height: 100px; */
+    /* argin-top: 20px; */
 }
 
 .shopping-cart-total {
