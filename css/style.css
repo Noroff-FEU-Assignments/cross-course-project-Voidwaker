@@ -849,18 +849,23 @@ height: 400px;
 
 /* about us */
 
-
-@media (min-width:801px) {
+@media (min-width:810px){
     .about-us-p{
-        display: block;
-    }
-
-
-    .about-us-p-mobile {
-        display: none;
+        display: hidden;
     }
 }
 
+@media (max-width:800px) {
+    .about-us-p {
+        display: none;
+    }
+
+}
+@media (min-width:800px){
+    .about-us-p-mobile{
+        display: none;
+    }
+}
 /* @media (min-width:) {
     .tos-total{
         flex-direction: column;
