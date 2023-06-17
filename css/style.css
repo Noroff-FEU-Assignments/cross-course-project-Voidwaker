@@ -217,7 +217,7 @@ main {
     
 }
 
-button {
+.cta {
     background-color: #E56E00;
     border: none;
     border-radius: 5px;
@@ -227,11 +227,12 @@ button {
 
 }
 
-button a {
+a {
     text-decoration: none;
     color: #000;
+    text-align: center;
+    
 }
-
 
 /*contact page*/
 /*productlist*/
@@ -462,8 +463,8 @@ form {
 .shopping-cart-shipping {
     display: flex;
     width: 831px;
-    height: 100px;
-    margin-top: 20px;
+    /* height: 100px; */
+    /* argin-top: 20px; */
 }
 
 .shopping-cart-total {
