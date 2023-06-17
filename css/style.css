@@ -81,6 +81,7 @@ nav a {
 .footer-text {
     display: flex;
     justify-content: space-around;
+    font-family: 'inter';
     
 }
 footer a {
@@ -571,14 +572,20 @@ form {
 }
 /* thank you */
 
+.thank-you-for-feedback {
+    background-color: #f8f8f8;
+}
 
 .thank-you-background img{
-
+display: flex;
+width: 500px;
+height: 400px;
 }
 
 .thank-you-text p {
     display: flex;
-    /* position: fixed; */
+    align-items: center;
+    justify-content: center;
     top: 40%;
     left: 10%;
     background-color: #fff;
@@ -588,8 +595,10 @@ form {
 }
 
 .thank-you-text,
-.thank-you-background {
+.thank-you-background,
+.thank-you-feedback-button{
     display: flex;
+    justify-content: center;
 }
 
 
@@ -641,6 +650,22 @@ form {
 
 /* for responsiveness*/
 
+@media (max-width: 800px){
+    .thank-you-background img{
+        display:none;
+    }
+}
+
+@media (max-width:800px) {
+    .thank-you-background,
+    .thank-you-feedback-button,
+    .thank-you-text {
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 810px) {
     .shipping-conditions{
         display: none;
@@ -665,6 +690,8 @@ form {
 
     }
 }
+
+
 
 @media (max-width:800px) {
     .product-information,
@@ -817,6 +844,8 @@ form {
     }
 }
 
+
+@media 
 
 
 
