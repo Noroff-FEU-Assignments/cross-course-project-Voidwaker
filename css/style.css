@@ -217,7 +217,7 @@ main {
     
 }
 
-button {
+.cta {
     background-color: #E56E00;
     border: none;
     border-radius: 5px;
@@ -227,10 +227,6 @@ button {
 
 }
 
-button a {
-    text-decoration: none;
-    color: #000;
-}
 
 
 /*contact page*/
