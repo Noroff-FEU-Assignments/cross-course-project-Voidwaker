@@ -153,7 +153,6 @@ h1{
 .rainydays-info {
     display: flex;
     flex-direction: column;
-    margin-right: 25px;
 }
 body {
     margin: 0;
@@ -476,7 +475,6 @@ form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    margin-left: 20px;
     width: 345px;
     height: 568px;
     border: 1px solid;
@@ -682,39 +680,90 @@ height: 400px;
 }
 
 /*media queries*/
-@media (max-width:800px){
-    .shopping-cart-box-fix,
-    .shopping-cart-box{
-        display: flex;
-        width: 200px;
-    }
-}
-@media (max-width:800px){
-    .shopping-cart-box,
-    .shopping-cart-content,
-    .shopping-cart-content-text,
-    .shopping-cart-shipping-terms,
-    .shopping-cart-total,
-    .shopping-cart-proceed {
-
-    }
-}
-
 /* for responsiveness*/
+@media (max-width:388px){
+    .h1-continue-shopping{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
 
-@media (max-width: 800px){
-    .thank-you-background img{
-        display:none;
+    }
+}
+@media (max-width:590px){
+    .h1-continue-shopping{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 22px;
+
+    }
+}
+@media (max-width:600px){
+    .contact-conteiner,
+    .contact-info,
+    .contact-form-conteiner,
+    .h1-thankyou,
+    .fonteiner-form,
+    .form-button{
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .jacket-item {
+        justify-self: center;
+    }
+}
+@media (max-width: 610px) {
+    .account-shopping {
+    display: none;
+    }
+}
+
+@media (max-width:700px) {
+    form,
+    textarea{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
     }
 }
 
 @media (max-width:800px) {
+    .about-us-p {
+        display: none;
+    }
+    .product-information,
+    .produckt-jacket-description{
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .thank-you-background img{
+        display:none;
+    }
     .thank-you-background,
     .thank-you-feedback-button,
     .thank-you-text {
         display: flex;
         align-items: center;
         margin-top: 80px;
+    }
+    
+        .shopping-cart-box-fix,
+        .shopping-cart-box{
+            display: flex;
+            width: 200px;
+        }
+    }
+
+
+@media (min-width:800px){
+    .about-us-p-mobile{
+        display: none;
+    }
+}
+@media (min-width:810px){
+    .about-us-p{
+        display: hidden;
     }
 }
 
@@ -725,89 +774,14 @@ height: 400px;
     }
 }
 
-@media (max-width: 610px) {
-    .account-shopping {
-    display: none;
-    }
-}
-@media(max-width:1000px){
-    .rainydays-info{
-        display: flex;
-        align-items: center;
-    }
-}
-@media (max-width:1000px){
-    .rainydays-info-h1{
-        display: flex;
-        text-align: center;
-        font-size: 30px;
-    }
-}
 
-@media (max-width:1020px) {
-    .home-page,
-    .app-info,
-    .homepage-features{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-    }
-}
-
-
-
-@media (max-width:800px) {
-    .product-information,
-    .produckt-jacket-description{
-        flex-wrap: wrap;
-        display: flex;
-    }
-}
 
 @media (max-width:856px){
-    .terms-and-conditions {
-        font-size: 14px;
-
-    }
-    .tos-text li {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width:856px){
-    .tos-heading{
-        justify-content: center;
-    }
-}
-@media (max-width:856px) {
-    .tos-text {
+    .jacket-item {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
-        flex-wrap: wrap;
-        padding: 20px;
     }
-}
-
-@media (min-width:857px){
-    .tos-text {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        row-gap: 20px;
-        
-    }
-}
-
-@media (max-width:856px){
-    .tos-total{
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width:856px){
     .product-information{
         display: flex;
         flex-wrap: wrap;
@@ -816,14 +790,27 @@ height: 400px;
         width: 300px;
         height: 300px;
     }
-}
-
-
-@media (max-width:856px){
-    .jacket-item {
+    .tos-total{
         display: flex;
         flex-wrap: wrap;
+    }
+    .tos-text {
+        display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        padding: 20px;
+        
+    }
+    .tos-heading{
+        justify-content: center;
+    }
+    .terms-and-conditions {
+        font-size: 14px;
+
+    }
+    .tos-text li {
+        margin-bottom: 10px;
     }
 }
 
@@ -840,41 +827,21 @@ height: 400px;
     }
 }
 
-@media (max-width:888px){
-    .order-total{
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
 
 @media (max-width:888px){
-    .h1-continue-shopping{
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 32px;
-
-    }
-}
-
-@media (max-width:590px){
     .h1-continue-shopping{
         display: flex;
         flex-wrap: wrap;
         font-size: 22px;
 
     }
-}
-
-@media (max-width:388px){
-    .h1-continue-shopping{
+    .order-total{
         display: flex;
         flex-wrap: wrap;
-        font-size: 16px;
-
     }
 }
 
-/* contact-us */
+
 
 @media (max-width:1000px){
     .contact-form-conteiner,
@@ -885,63 +852,22 @@ height: 400px;
         align-items: center;
         gap: 20px;
     }
-}
-
-@media (max-width:600px){
-    .contact-conteiner,
-    .contact-info,
-    .contact-form-conteiner,
-    .h1-thankyou,
-    .fonteiner-form,
-    .form-button{
+    .rainydays-info-h1{
+        display: flex;
+        text-align: center;
+        font-size: 30px;
+    }
+    .rainydays-info{
         display: flex;
         align-items: center;
-        
     }
-}
-
-@media (max-width:700px) {
-    form,
-    textarea{
+    .home-page,
+    .app-info,
+    .homepage-features{
         display: flex;
-        flex-direction: column;
-        width: 300px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
     }
 }
-
-
-
-
-/* about us */
-
-@media (min-width:810px){
-    .about-us-p{
-        display: hidden;
-    }
-}
-
-@media (max-width:800px) {
-    .about-us-p {
-        display: none;
-    }
-
-}
-@media (min-width:800px){
-    .about-us-p-mobile{
-        display: none;
-    }
-}
-
-
-
-
-/* @media (min-width:) {
-    .tos-total{
-        flex-direction: column;
-        padding: 20px;
-    }
-} */
-
-
-
-/* mobile */
