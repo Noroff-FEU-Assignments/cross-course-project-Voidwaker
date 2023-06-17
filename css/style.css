@@ -469,12 +469,38 @@ form {
     margin-top: 20px;
     margin-left: 20px;
     width: 345px;
-    height: 446px;
+    height: 568px;
     border: 1px solid;
     
 
 }
+.shopping-cart-shipping-terms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    font-weight: 600;
+}
+.shopping-cart-checkout,
+.shopping-cart-proceed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 
+.shopping-cart-checkout :nth-child(2){
+    margin-top: 25px;
+    display: flex;
+}
+.shopping-cart-proceed{
+    display: flex;
+    margin-top: 25px;
+}
+
+.shopping-cart-proceed-text{
+    text-decoration: overline;
+}
 .h3{
     width: 59px;
     height: 29px;
