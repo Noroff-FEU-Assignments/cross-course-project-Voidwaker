@@ -235,11 +235,13 @@ a {
 
 /*contact page*/
 /*productlist*/
-
+div .jacket-space{
+   /*  margin:80px */
+}
 .jackets {
     display: flex;
     flex-wrap: wrap;
-    margin: 80px;
+    margin: auto;
 }
 
 .jackets img {
@@ -274,6 +276,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 50px;
 }
 
 /* productdescription */
@@ -710,7 +713,8 @@ height: 400px;
     }
 
     .jacket-item {
-        justify-self: center;
+        /* justify-self: center; */
+        justify-content: center;
     }
 }
 @media (max-width: 610px) {
@@ -870,4 +874,20 @@ height: 400px;
         align-items: center;
 
     }
+    .product-conteiner {
+        display: block;
+        margin-inline: auto;
+    }
+    div .jacket-space{
+        margin: 0;
+        justify-content: center;
+    }
+    .produkt-konteiner {
+        justify-content: center;
+    }
+    .jacket-space{
+        gap: 25px;
+        
+    }
 }
+
