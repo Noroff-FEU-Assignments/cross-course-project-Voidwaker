@@ -257,7 +257,7 @@ a {
   gap: 50px;
 }
 /* new css for the product and single products */
-.product-container {
+#product-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
