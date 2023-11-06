@@ -1,19 +1,22 @@
 const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/";
 
 async function fetchProduct(id) {
+    const loadingIndicator = document.getElementById('loading-indicator');
+    loadingIndicator.style.display = 'block';
     try {
         const response = await fetch(`${apiUrl}${id}`);
-        console.log(`API Response:`, response); // Log the API response
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const product = await response.json();
-        console.log(`Product Details:`, product); // Log the product details
         displayProduct(product);
     } catch (error) {
         displayError(error);
+    } finally {
+        loadingIndicator.style.display = 'none'; 
     }
 }
+
 
 function displayProduct(product) {
     const productContainer = document.getElementById("product-container");
@@ -31,11 +34,22 @@ function displayProduct(product) {
     const priceElement = document.createElement("p");
     priceElement.textContent = `Price: $${product.price}`;
 
+    // add to cart button
+    const cartButton = document.createElement("button");
+    cartButton.textContent = "Add to cart";
+    cartButton.onclick = function() {
+        console.log('Product added to cart', product);
+        // redirect you to the shopping cart page.
+        window.location.href = '/cart.html';
+    };
+
     productContainer.appendChild(imageElement);
     productContainer.appendChild(nameElement);
     productContainer.appendChild(descriptionElement);
     productContainer.appendChild(priceElement);
+    productContainer.appendChild(cartButton);
 }
+
 
 function displayError(error) {
     const errorElement = document.getElementById("error");
@@ -53,7 +67,7 @@ function getProductIdFromUrl() {
 
 async function main() {
     const productId = getProductIdFromUrl();
-    console.log(`Product ID: ${productId}`); // Log the product ID
+    console.log(`Product ID: ${productId}`); 
     if (productId) {
         await fetchProduct(productId);
     } else {
