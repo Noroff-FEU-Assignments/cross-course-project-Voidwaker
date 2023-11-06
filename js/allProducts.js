@@ -1,7 +1,9 @@
 const apiUrl = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function fetchProducts() {
+    const loadingIndicator = document.getElementById('loading-indicator');
     try {
+        loadingIndicator.style.display = 'block';  // Show loading indicator
         const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -10,6 +12,8 @@ async function fetchProducts() {
         displayProducts(products);
     } catch (error) {
         displayError(error);
+    } finally {
+        loadingIndicator.style.display = 'none';  // Hide loading indicator
     }
 }
 
