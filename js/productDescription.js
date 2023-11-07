@@ -67,7 +67,7 @@ function getProductIdFromUrl() {
 
 async function main() {
     const productId = getProductIdFromUrl();
-    console.log(`Product ID: ${productId}`); 
+    console.log(`Product ID: ${productId}`);
     if (productId) {
         await fetchProduct(productId);
     } else {
