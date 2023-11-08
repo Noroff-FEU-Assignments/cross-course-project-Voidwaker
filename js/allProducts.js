@@ -29,7 +29,7 @@ function displayProducts(products) {
     imageElement.alt = product.name;
 
     const nameElement = document.createElement("h2");
-    nameElement.textContent = product.name;
+    nameElement.textContent = product.title;
 
     const descriptionElement = document.createElement("p");
     descriptionElement.textContent = product.description;

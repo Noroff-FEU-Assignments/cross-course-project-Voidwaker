@@ -9,8 +9,10 @@ async function fetchProduct(id) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const product = await response.json();
+        console.log('Product fetched:', product); // Debugging line
         displayProduct(product);
     } catch (error) {
+        console.error('Fetching product failed:', error); // Debugging line
         displayError(error);
     } finally {
         loadingIndicator.style.display = 'none'; 
@@ -18,15 +20,16 @@ async function fetchProduct(id) {
 }
 
 
+
 function displayProduct(product) {
     const productContainer = document.getElementById("product-container");
+
+    const nameElement = document.createElement("h2");
+    nameElement.textContent = product.title;
 
     const imageElement = document.createElement("img");
     imageElement.src = product.image;
     imageElement.alt = product.name;
-
-    const nameElement = document.createElement("h2");
-    nameElement.textContent = product.name;
 
     const descriptionElement = document.createElement("p");
     descriptionElement.textContent = product.description;

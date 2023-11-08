@@ -16,7 +16,7 @@ function createProductElement(product) {
     }
 
     const nameElement = document.createElement('h2');
-    nameElement.textContent = product.name || "No name available"; // Fallback text in case name is not provided
+    nameElement.textContent = product.title || "No name available"; // Fallback text in case name is not provided
 
     const priceElement = document.createElement('p');
     priceElement.textContent = `Price: $${product.price}`;
@@ -28,7 +28,7 @@ function createProductElement(product) {
     totalElement.textContent = `Total: $${(product.price * product.quantity).toFixed(2)}`;
 
     // Check if any details are missing
-    if (!product.name) console.error("Product name is missing");
+    if (!product.title) console.error("Product name is missing");
     if (!product.price) console.error("Product price is missing");
     if (typeof product.quantity === 'undefined') console.error("Product quantity is missing");
 
