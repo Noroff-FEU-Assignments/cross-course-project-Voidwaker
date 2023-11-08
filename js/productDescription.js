@@ -37,11 +37,18 @@ function displayProduct(product) {
     // add to cart button
     const cartButton = document.createElement("button");
     cartButton.textContent = "Add to cart";
-    cartButton.onclick = function() {
-        console.log('Product added to cart', product);
+    cartButton.addEventListener('click', function() {
+        addToCart(product);
+        alert('Product added to cart');
+        window.location.href = '/cart.html';
+    });
+    
+    /* cartButton.onclick = function() {
+        addToCart(product);
+        alert("Product added to the cart!");
         // redirect you to the shopping cart page.
         window.location.href = '/cart.html';
-    };
+    }; */
 
     productContainer.appendChild(imageElement);
     productContainer.appendChild(nameElement);

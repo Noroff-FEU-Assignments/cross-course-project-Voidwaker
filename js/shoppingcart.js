@@ -1,47 +1,101 @@
 let cart = JSON.parse(localStorage.getItem('Shoppingcart')) || [];
 
-function displayCart() {
-    const cartElement = document.getElementById('cart');
-    cartElement.innerHTML = '';
-    cart.forEach(function(product) {
-        const productElement = document.createElement('div');
-        productElement.className = 'product';
+function createProductElement(product) {
+    console.log("Creating element for product:", product);
 
-        const nameElement = document.createElement('h2');
-        nameElement.textContent = product.name;
+    const productElement = document.createElement('div');
+    productElement.className = 'product';
 
-        const priceElement = document.createElement('p');
-        priceElement.textContent = `Price: $${product.price}`;
+    // If the product has an image property, create and append an img element.
+    if (product.image) {
+        const imgElement = document.createElement('img');
+        imgElement.src = product.image;
+        imgElement.alt = product.name || 'Product image';
+        imgElement.style.width = '100px'; // Set the image width or any style as needed
+        productElement.appendChild(imgElement);
+    }
 
-        const quantityElement = document.createElement('p');
-        quantityElement.textContent = `Quantity: ${product.quantity}`;
+    const nameElement = document.createElement('h2');
+    nameElement.textContent = product.name || "No name available"; // Fallback text in case name is not provided
 
-        const totalElement = document.createElement('p');
-        totalElement.textContent = `Total: $${product.price * product.quantity}`;
+    const priceElement = document.createElement('p');
+    priceElement.textContent = `Price: $${product.price}`;
 
-        productElement.appendChild(nameElement);
-        productElement.appendChild(priceElement);
-        productElement.appendChild(quantityElement);
-        productElement.appendChild(totalElement);
+    const quantityElement = document.createElement('p');
+    quantityElement.textContent = `Quantity: ${product.quantity}`;
 
-        cartElement.appendChild(productElement);
-    });
+    const totalElement = document.createElement('p');
+    totalElement.textContent = `Total: $${(product.price * product.quantity).toFixed(2)}`;
+
+    // Check if any details are missing
+    if (!product.name) console.error("Product name is missing");
+    if (!product.price) console.error("Product price is missing");
+    if (typeof product.quantity === 'undefined') console.error("Product quantity is missing");
+
+    // Remove products from the cart
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove one';
+    removeButton.onclick = function() {
+        removeFromCart(product.id);
+    };
+
+    // Append elements to the productElement in the order you want them to display
+    productElement.appendChild(nameElement);
+    productElement.appendChild(priceElement);
+    productElement.appendChild(quantityElement);
+    productElement.appendChild(totalElement);
+    productElement.appendChild(removeButton);
+
+    return productElement;
 }
 
 
-function addToCart(product) {
-    const existingProduct = cart.find(function(p) {
-        return p.id === product.id;
-    });
-    if (existingProduct) {
-        existingProduct.quantity += 1;
+function removeFromCart(productId) {
+    const productIndex = cart.findIndex(product => product.id === productId);
+
+    if (productIndex !== -1) {
+        // Decrease the quantity of the product
+        cart[productIndex].quantity -= 1;
+
+        // If the quantity is 0, remove the product from the cart
+        if (cart[productIndex].quantity === 0) {
+            cart.splice(productIndex, 1);
+        }
+
+        // Update the cart in local storage and re-display the cart
+        localStorage.setItem('Shoppingcart', JSON.stringify(cart));
+        displayCart();
     } else {
-        product.quantity = 1;
-        cart.push(product);
+        console.error('Product not found in cart: ', productId);
     }
+}
+
+
+
+function displayCart() {
+    const cartElement = document.getElementById('cart');
+    cartElement.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+    cart.forEach(product => {
+        fragment.appendChild(createProductElement(product));
+    });
+    cartElement.appendChild(fragment);
+}
+
+function addToCart(productToAdd) {
+    const existingProductIndex = cart.findIndex(p => p.id === productToAdd.id);
+    if (existingProductIndex !== -1) {
+        cart[existingProductIndex].quantity += 1;
+    } else {
+        // Ensure that the productToAdd includes the 'name' property
+        cart.push({ ...productToAdd, quantity: 1 });
+    }
+    console.log("Updated cart:", cart);
     localStorage.setItem('Shoppingcart', JSON.stringify(cart));
     displayCart();
 }
 
-localStorage.setItem('Shoppingcart', JSON.stringify(cart));
-console.log('cart', cart);
+
+document.addEventListener('DOMContentLoaded', function() {
+    displayCart();
+});  
