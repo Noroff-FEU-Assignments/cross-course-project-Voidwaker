@@ -43,13 +43,6 @@ function displayProduct(product) {
         window.location.href = '/cart.html';
     });
     
-    /* cartButton.onclick = function() {
-        addToCart(product);
-        alert("Product added to the cart!");
-        // redirect you to the shopping cart page.
-        window.location.href = '/cart.html';
-    }; */
-
     productContainer.appendChild(imageElement);
     productContainer.appendChild(nameElement);
     productContainer.appendChild(descriptionElement);
