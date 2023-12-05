@@ -34,6 +34,9 @@ function displayProducts(products) {
     const descriptionElement = document.createElement("p");
     descriptionElement.textContent = product.description;
 
+    const priceElement = document.createElement("p");
+    priceElement.textContent = `Price: $${product.price}`;
+
     const buttonElement = document.createElement("a");
     buttonElement.href = `productdescription.html?id=${product.id}`;
     buttonElement.textContent = "View Details";
@@ -42,6 +45,7 @@ function displayProducts(products) {
     productElement.appendChild(imageElement);
     productElement.appendChild(nameElement);
     productElement.appendChild(descriptionElement);
+    productElement.appendChild(priceElement);
     productElement.appendChild(buttonElement);
 
     productContainer.appendChild(productElement);
