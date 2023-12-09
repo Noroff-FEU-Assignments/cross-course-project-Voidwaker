@@ -195,7 +195,10 @@ main {
   display: flex;
   width: 200px;
 }
-
+.featured-jackets4 img {
+  width: 200px;
+  height: 248px;
+}
 .homepage-features {
   display: flex;
   justify-content: space-between;
