@@ -15,7 +15,7 @@ function fetchJackets() {
 }
 
 function displayFeaturedJackets(jackets) {
-    if(jackets.length < 3) {
+    if(jackets.length < 4) {
         console.error('Not enough jackets to display');
         return;
     }
