@@ -24,6 +24,7 @@ function displayFeaturedJackets(jackets) {
     updateJacketInfo(jackets[0], 'featured-jackets1');
     updateJacketInfo(jackets[1], 'featured-jackets2');
     updateJacketInfo(jackets[2], 'featured-jackets3');
+    updateJacketInfo(jackets[11], 'featured-jackets4');
 }
 
 function updateJacketInfo(jacket, elementId) {
