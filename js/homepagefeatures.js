@@ -30,16 +30,22 @@ function displayFeaturedJackets(jackets) {
 function updateJacketInfo(jacket, elementId) {
     const element = document.getElementById(elementId);
     if (element) {
-        // Use the image URL directly from the jacket object
         const imageUrl = jacket.image; // Assuming 'imageUrl' is the property name
 
-        element.innerHTML = `
+        let htmlContent = `
             <h3>${jacket.title}</h3>
             <img src="${imageUrl}" alt="${jacket.title}">
             <p>Price: $${jacket.price}</p>
-            <a class="cta" href="productdescription.html?id=${jacket.id}">View Details</a>
         `;
+
+        // Conditionally add the "View Details" button
+        if (jacket.id !== "b8b528fc-6c60-41f6-a5a9-9a8b27a9482a") { // Replace with the actual ID
+            htmlContent += `<a class="cta" href="productdescription.html?id=${jacket.id}">View Details</a>`;
+        }
+
+        element.innerHTML = htmlContent;
     }
 }
+
 
 
