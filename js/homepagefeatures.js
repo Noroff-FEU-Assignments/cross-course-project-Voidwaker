@@ -30,7 +30,7 @@ function updateJacketInfo(jacket, elementId) {
     const element = document.getElementById(elementId);
     if (element) {
         // Use the image URL directly from the jacket object
-        const imageUrl = jacket.imageUrl; // Assuming 'imageUrl' is the property name
+        const imageUrl = product.image; // Assuming 'imageUrl' is the property name
 
         element.innerHTML = `
             <h3>${jacket.title}</h3>
