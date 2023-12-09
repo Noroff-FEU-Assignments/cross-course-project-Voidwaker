@@ -24,13 +24,13 @@ function filterProductsByGender(products, gender) {
 function setupGenderFilters() {
     document.getElementById('mens-jackets').addEventListener('click', (event) => {
         event.preventDefault(); // Prevent default link behavior
-        const mensJackets = filterProductsByGender(allProducts, 'men');
+        const mensJackets = filterProductsByGender(allProducts, 'mens');
         displayProducts(mensJackets);
     });
 
     document.getElementById('womens-jackets').addEventListener('click', (event) => {
         event.preventDefault(); // Prevent default link behavior
-        const womensJackets = filterProductsByGender(allProducts, 'women');
+        const womensJackets = filterProductsByGender(allProducts, 'womens');
         displayProducts(womensJackets);
     });
 }
@@ -79,6 +79,10 @@ function displayProducts(products) {
         imageElement.src = product.image;
         imageElement.alt = product.title;
 
+        const genderElement = document.createElement("p");
+        genderElement.className = "product-gender";
+        genderElement.textContent = product.gender === 'male' ? "Men's Jacket" : "Women's Jacket";
+
         const priceElement = document.createElement("p");
         priceElement.textContent = `Price: $${product.price}`;
 
@@ -107,6 +111,7 @@ function displayProducts(products) {
         productElement.appendChild(sizeSelect); //size dropdown
         productElement.appendChild(detailsButton); // view details button
         productElement.appendChild(quantityElement); // quantity dropdown
+        productElement.appendChild(genderElement);
         productContainer.appendChild(productElement);
     });
 }
