@@ -1,4 +1,4 @@
-const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/";
+const apiUrl = "https://bollingvaaler.no/wp-json/wc/store/products/";
 
 async function fetchProduct(id) {
     const loadingIndicator = document.getElementById('loading-indicator');

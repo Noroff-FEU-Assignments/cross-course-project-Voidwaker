@@ -54,7 +54,7 @@ function displayProducts(products) {
 
             const imageElement = document.createElement("img");
             if (product.images && product.images.length > 0) {
-                imageElement.src = product.images[0].src; // Bruker det første bildet hvis tilgjengelig
+                imageElement.src = product.images[0].src;
                 imageElement.alt = product.name;
             }
 
@@ -73,13 +73,20 @@ function displayProducts(products) {
             if (product.description && product.description.rendered) {
                 descriptionElement.innerHTML = product.description.rendered;
             }
-            // Legg til annen informasjon du vil vise her
 
+            // Legg til en knapp for å vise detaljer og lenk til produktbeskrivelsessiden
+            const detailsButton = document.createElement("a");
+            detailsButton.href = `productdescription.html?id=${product.id}`; // Endre URL'en for å inkludere produkt-ID eller annen relevant identifikasjon
+            detailsButton.textContent = "View Details";
+            detailsButton.className = "view-details-button";
+
+            // Legg til alle elementene i produktet
             productElement.appendChild(nameElement);
             productElement.appendChild(imageElement);
             productElement.appendChild(priceElement);
             productElement.appendChild(sizeElement);
             productElement.appendChild(descriptionElement);
+            productElement.appendChild(detailsButton);
 
             productContainer.appendChild(productElement);
         });
