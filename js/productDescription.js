@@ -25,17 +25,29 @@ function displayProduct(product) {
     const productContainer = document.getElementById("product-container");
 
     const nameElement = document.createElement("h2");
-    nameElement.textContent = product.title;
+    nameElement.textContent = product.name;
 
     const imageElement = document.createElement("img");
-    imageElement.src = product.image;
-    imageElement.alt = product.name;
+    if (product.images && product.images.length > 0) {
+        imageElement.src = product.images[0].src;
+        imageElement.alt = product.name;
+    }
 
     const descriptionElement = document.createElement("p");
-    descriptionElement.textContent = product.description;
+    if (product.description && product.description.rendered) {
+        descriptionElement.innerHTML = product.description.rendered;
+    }
 
     const priceElement = document.createElement("p");
-    priceElement.textContent = `Price: $${product.price}`;
+    if (product.prices && product.prices.price_html) {
+        priceElement.innerHTML = product.prices.price_html;
+    } else if (product.prices && product.prices.price) {
+        // Hvis price_html er tomt, prøv å bruke "price" som fallback
+        priceElement.textContent = `Price: $${product.prices.price}`;
+    } else {
+        // Hvis ingen prisinformasjon er tilgjengelig
+        priceElement.textContent = "Price: Not available";
+    }
 
     // add to cart button
     const cartButton = document.createElement("button");
