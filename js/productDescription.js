@@ -49,6 +49,20 @@ function displayProduct(product) {
         priceElement.textContent = "Price: Not available";
     }
 
+    const sizeElement = document.createElement("p");
+    if (product.sizes && product.sizes.length > 0) {
+        sizeElement.textContent = `Available Sizes: ${product.sizes.join(", ")}`;
+    } else {
+        sizeElement.textContent = "Sizes: Not available";
+    }
+
+    const quantityElement = document.createElement("p");
+    if (product.quantity) {
+        quantityElement.textContent = `Quantity: ${product.quantity}`;
+    } else {
+        quantityElement.textContent = "Quantity: Not available";
+    }
+
     // add to cart button
     const cartButton = document.createElement("button");
     cartButton.className = "add-to-cart-button";
@@ -63,6 +77,8 @@ function displayProduct(product) {
     productContainer.appendChild(nameElement);
     productContainer.appendChild(descriptionElement);
     productContainer.appendChild(priceElement);
+    productContainer.appendChild(sizeElement);
+    productContainer.appendChild(quantityElement);
     productContainer.appendChild(cartButton);
 }
 
