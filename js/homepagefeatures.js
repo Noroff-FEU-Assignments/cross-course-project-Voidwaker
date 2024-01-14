@@ -33,9 +33,9 @@ function displayFeaturedJackets(jackets) {
 function updateJacketInfo(jacket, elementId) {
     const element = document.getElementById(elementId);
     if (element) {
-        const imageUrl = jacket.images && jacket.images.length > 0 ? jacket.images[0].src : ''; // Sjekker om 'images' eksisterer og har minst ett bilde
+        const imageUrl = jacket.images && jacket.images.length > 0 ? jacket.images[0].src : ''; // Get the first image URL
 
-        console.log('API Response for Jacket:', jacket); // Legg til denne linjen for å se hva som er i jakkeobjektet
+        console.log('API Response for Jacket:', jacket); // Debugging line
 
         let htmlContent = `
             <h3>${jacket.name}</h3>
@@ -50,7 +50,7 @@ function updateJacketInfo(jacket, elementId) {
         // Legg til prisen her
         const priceElement = document.createElement("p");
         if (jacket.prices && jacket.prices.price) {
-            const priceInNOK = jacket.prices.price / 100; // Prisen i norske kroner
+            const priceInNOK = jacket.prices.price / 100; // Prisen in nok
             const formattedPrice = priceInNOK.toLocaleString("nb-NO", { style: "currency", currency: "NOK" });
             priceElement.textContent = `Price: ${formattedPrice}`;
         } else {
@@ -58,7 +58,7 @@ function updateJacketInfo(jacket, elementId) {
         }
 
         element.innerHTML = htmlContent;
-        element.appendChild(priceElement); // Legg til prisen i elementet
+        element.appendChild(priceElement); 
     }
 }
 

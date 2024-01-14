@@ -63,7 +63,7 @@ function displayProducts(products) {
                 priceElement.innerHTML = product.prices.price_html;
             }
 
-            // Legg til kode for å vise størrelser her
+            
             const sizeElement = document.createElement("p");
             if (product.sizes && product.sizes.length > 0) {
                 sizeElement.textContent = `Available Sizes: ${product.sizes.join(", ")}`;
@@ -74,13 +74,12 @@ function displayProducts(products) {
                 descriptionElement.innerHTML = product.description.rendered;
             }
 
-            // Legg til en knapp for å vise detaljer og lenk til produktbeskrivelsessiden
+           
             const detailsButton = document.createElement("a");
-            detailsButton.href = `productdescription.html?id=${product.id}`; // Endre URL'en for å inkludere produkt-ID eller annen relevant identifikasjon
-            detailsButton.textContent = "View Details";
+            detailsButton.href = `productdescription.html?id=${product.id}`; 
             detailsButton.className = "view-details-button";
 
-            // Legg til alle elementene i produktet
+            
             productElement.appendChild(nameElement);
             productElement.appendChild(imageElement);
             productElement.appendChild(priceElement);
@@ -91,7 +90,7 @@ function displayProducts(products) {
             productContainer.appendChild(productElement);
         });
     } else {
-        // Handle tilfelle der det ikke er noen produkter å vise
+        
         productContainer.innerHTML = "No products found.";
     }
 }
@@ -114,4 +113,5 @@ async function main() {
 }
 
 main();
+
 

@@ -10,6 +10,17 @@ async function fetchProduct(id) {
         }
         const product = await response.json();
         console.log('Product fetched:', product); // Debugging line
+
+        // converts the price from cents to NOK
+        const priceInOre = parseFloat(product.prices.price) / 100;
+        
+        // formats the price to NOK
+        const formattedPrice = priceInOre.toLocaleString("nb-NO", { style: "currency", currency: "NOK" });
+
+        console.log('Price in NOK:', formattedPrice); // Debugging line
+
+        product.prices.price = formattedPrice; // opdates the price in the product object
+
         displayProduct(product);
     } catch (error) {
         console.error('Fetching product failed:', error); // Debugging line
@@ -38,7 +49,7 @@ function displayProduct(product) {
 
     const priceElement = document.createElement("p");
     if (product.prices && product.prices.price) {
-        const priceInNOK = product.prices.price; // Pris i norske kroner
+        const priceInNOK = product.prices.price; // price in NOK
         const formattedPrice = priceInNOK.toLocaleString("nb-NO", { style: "currency", currency: "NOK" });
         priceElement.textContent = `Price: ${formattedPrice}`;
     } else {
