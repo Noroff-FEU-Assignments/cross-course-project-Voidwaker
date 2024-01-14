@@ -14,9 +14,8 @@ function fetchJackets() {
         });
 }
 
-
 function displayFeaturedJackets(jackets) {
-    if(jackets.length < 4) {
+    if (jackets.length < 4) {
         console.error('Not enough jackets to display');
         return;
     }
@@ -25,28 +24,46 @@ function displayFeaturedJackets(jackets) {
     updateJacketInfo(jackets[4], 'featured-jackets1');
     updateJacketInfo(jackets[1], 'featured-jackets2');
     updateJacketInfo(jackets[2], 'featured-jackets3');
-    updateJacketInfo(jackets[6], 'featured-jackets4');
+    
+    // Check if the jacket ID is 6 (or any other ID you want to exclude)
+    if (jackets[6].id !== 6) {
+        updateJacketInfo(jackets[6], 'featured-jackets4');
+    }
 }
-
 function updateJacketInfo(jacket, elementId) {
     const element = document.getElementById(elementId);
     if (element) {
         const imageUrl = jacket.images && jacket.images.length > 0 ? jacket.images[0].src : ''; // Sjekker om 'images' eksisterer og har minst ett bilde
 
+        console.log('API Response for Jacket:', jacket); // Legg til denne linjen for å se hva som er i jakkeobjektet
+
         let htmlContent = `
             <h3>${jacket.name}</h3>
             <img src="${imageUrl}" alt="${jacket.name}">
-            <p>Price: ${jacket.prices.price_html}</p>
         `;
 
         // Conditionally add the "View Details" button
         if (jacket.permalink) {
-            htmlContent += `<a class="cta" href="${jacket.permalink}">View Details</a>`;
+            htmlContent += `<a class="cta" href="productdescription.html?id=${jacket.id}">View Details</a>`;
+        }
+
+        // Legg til prisen her
+        const priceElement = document.createElement("p");
+        if (jacket.prices && jacket.prices.price) {
+            const priceInNOK = jacket.prices.price / 100; // Prisen i norske kroner
+            const formattedPrice = priceInNOK.toLocaleString("nb-NO", { style: "currency", currency: "NOK" });
+            priceElement.textContent = `Price: ${formattedPrice}`;
+        } else {
+            priceElement.textContent = "Price: Not available";
         }
 
         element.innerHTML = htmlContent;
+        element.appendChild(priceElement); // Legg til prisen i elementet
     }
 }
+
+    
+
 
 
 

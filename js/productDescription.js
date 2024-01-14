@@ -21,7 +21,6 @@ async function fetchProduct(id) {
 
 function displayProduct(product) {
     const productContainer = document.getElementById("product-container");
-    const descriptionContainer = document.getElementById("product-description"); 
 
     const nameElement = document.createElement("h2");
     nameElement.textContent = product.name;
@@ -33,8 +32,8 @@ function displayProduct(product) {
     }
 
     const descriptionElement = document.createElement("p");
-    if (product.description && product.description.rendered) {
-        descriptionElement.innerHTML = product.description.rendered;
+    if (product.short_description) {
+        descriptionElement.innerHTML = product.short_description;
     }
 
     const priceElement = document.createElement("p");
@@ -58,10 +57,7 @@ function displayProduct(product) {
     
     productContainer.appendChild(imageElement);
     productContainer.appendChild(nameElement);
-
-    
-    descriptionContainer.appendChild(descriptionElement);
-
+    productContainer.appendChild(descriptionElement);
     productContainer.appendChild(priceElement);
     productContainer.appendChild(cartButton);
 }
