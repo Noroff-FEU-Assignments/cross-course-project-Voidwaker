@@ -19,10 +19,9 @@ async function fetchProduct(id) {
     }
 }
 
-
-
 function displayProduct(product) {
     const productContainer = document.getElementById("product-container");
+    const descriptionContainer = document.getElementById("product-description"); 
 
     const nameElement = document.createElement("h2");
     nameElement.textContent = product.name;
@@ -39,30 +38,14 @@ function displayProduct(product) {
     }
 
     const priceElement = document.createElement("p");
-    if (product.prices && product.prices.price_html) {
-        priceElement.innerHTML = product.prices.price_html;
-    } else if (product.prices && product.prices.price) {
-        // Hvis price_html er tomt, prøv å bruke "price" som fallback
-        priceElement.textContent = `Price: $${product.prices.price}`;
+    if (product.prices && product.prices.price) {
+        const priceInNOK = product.prices.price; // Pris i norske kroner
+        const formattedPrice = priceInNOK.toLocaleString("nb-NO", { style: "currency", currency: "NOK" });
+        priceElement.textContent = `Price: ${formattedPrice}`;
     } else {
-        // Hvis ingen prisinformasjon er tilgjengelig
         priceElement.textContent = "Price: Not available";
     }
-
-    const sizeElement = document.createElement("p");
-    if (product.sizes && product.sizes.length > 0) {
-        sizeElement.textContent = `Available Sizes: ${product.sizes.join(", ")}`;
-    } else {
-        sizeElement.textContent = "Sizes: Not available";
-    }
-
-    const quantityElement = document.createElement("p");
-    if (product.quantity) {
-        quantityElement.textContent = `Quantity: ${product.quantity}`;
-    } else {
-        quantityElement.textContent = "Quantity: Not available";
-    }
-
+    
     // add to cart button
     const cartButton = document.createElement("button");
     cartButton.className = "add-to-cart-button";
@@ -75,13 +58,13 @@ function displayProduct(product) {
     
     productContainer.appendChild(imageElement);
     productContainer.appendChild(nameElement);
-    productContainer.appendChild(descriptionElement);
+
+    
+    descriptionContainer.appendChild(descriptionElement);
+
     productContainer.appendChild(priceElement);
-    productContainer.appendChild(sizeElement);
-    productContainer.appendChild(quantityElement);
     productContainer.appendChild(cartButton);
 }
-
 
 function displayError(error) {
     const errorElement = document.getElementById("error");

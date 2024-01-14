@@ -1,4 +1,4 @@
-const url = "https://api.noroff.dev/api/v1/rainy-days";
+const url = "https://bollingvaaler.no/wp-json/wc/store/products/";
 
 export async function makeApiCall() {
     try {
