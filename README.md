@@ -20,11 +20,17 @@ i tried to make this as usefull as possible, added an bit longer and more detail
 git clone: https://github.com/Noroff-FEU-Assignments/cross-course-project-Voidwaker
 
 install the dependencies: N/A npm install
+
 --running
+
 to run the app, run the following commands:
+
 npm run start
+
 --contributing
+
 contributions are welcome but i woild like/request that the individual that does so clones the conde and add notes where contributions are made so i can review any cnages before they are commtted to the project permanently. thanks!
+
 -- contact
 this is where you can leave your social links for people to contact you,  such as linkedln or wtitter link e.g
 -https://twitter.com/situasjon
