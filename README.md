@@ -1,6 +1,6 @@
-#A Rainydays
+# Rainydays
 
-#AA Description
+## Description
 this project was the first one we started on, with just polain html/css then we refinded it, byu fetching the produsts from an api we had to setup ourself (wordpress) and used javaascrip to fetch the products, the main target audience for this project is men and womed aged 30-50 whoes intrests are: being outdor, hiking, exproring, skiing, camping, canoeing etc. the uniquye selling point for this assignment was that the jackets should be in the mid-price range making them affordable for everyone.
 --homepage
 
@@ -14,7 +14,7 @@ i made the productpage dynamic and working on every device down to 300px, trting
 
 i tried to make this as usefull as possible, added an bit longer and more detailed desctiption about the jackets and wich use theyr ment for, also making it easy to add to cart, or go back to the product page, so the user could view another one,if the one they click one was not suited for theyr use.
 
-#AA getting stared
+## getting stared
 *installing*
 --clone the repo:
 git clone: https://github.com/Noroff-FEU-Assignments/cross-course-project-Voidwaker
