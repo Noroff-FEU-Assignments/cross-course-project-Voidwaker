@@ -1,3 +1,5 @@
+![Skjermbilde 2024-02-21 123518](https://github.com/Noroff-FEU-Assignments/cross-course-project-Voidwaker/assets/128046262/fca585d7-886b-4ac2-9299-b6281bf9c1a7)
+
 # Rainydays
 
 ## Description
